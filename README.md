@@ -136,6 +136,8 @@ A sophisticated multi-agent system powered by Google's Gemini LLM that autonomou
 │ (In-Memory Cache)    │  │ (JSON Parsed + Ranked)     │
 │ • 10,000 Records     │  │ • Top 5 Results Filtered   │
 │ • Pre-computed Stats │  │ • Relevance Scored         │
+│ • Dynamic Queries    │  │                            │
+│   (Real-time Calc)   │  │                            │
 └──────────────────────┘  └────────────────────────────┘
         │                         │
         └─────────┬───────────────┘
