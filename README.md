@@ -5,6 +5,13 @@
 
 ---
 
+## 📦 Data Source
+
+- **Dataset**: [Bank Customer Churn Prediction Dataset](https://www.kaggle.com/datasets/saurabhbadole/bank-customer-churn-prediction-dataset)
+- **Source**: Kaggle
+
+---
+
 ## 📋 Project Overview
 
 This project demonstrates an advanced **multi-agent agentic AI system** that transforms raw bank customer churn data into actionable executive insights. Built for the **Enterprise Agents track**, it showcases a production-ready architecture where specialized AI agents work autonomously to deliver intelligent analysis, combining internal data exploration with external market intelligence through web search capabilities.
