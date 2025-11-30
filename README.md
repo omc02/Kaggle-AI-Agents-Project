@@ -101,7 +101,7 @@ A sophisticated multi-agent system powered by Google's Gemini LLM that autonomou
 ### Architecture Components
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│              Executive Query Interface                       │
+│              Executive Query Interface                      │
 │        (Jupyter Widgets Chatbot with Web Search Toggle)     │
 └──────────────────┬──────────────────────────────────────────┘
                    │
@@ -265,4 +265,4 @@ The agent architecture is designed for extension:
 **Created by:** Omar Chehab  
 **Date:** November 30, 2025  
 **Version:** 1.0  
-**Course:** Google AI Agents Intensive - 5-Day Program
+**Course:** Kaggle Google AI Agents Intensive - 5-Day Program
