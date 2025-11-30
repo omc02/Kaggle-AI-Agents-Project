@@ -1,209 +1,125 @@
 # 🤖 AI-Powered Multi-Agent Banking Customer Churn Analytics Engine
-## Use Case: Agentic Executive Intelligence Platform with Gemini-Powered Insights Q&A and Web Search Capabilities
+## Use Case: Agentic Executive Intelligence Platform with Gemini-Powered Insights Q&A and Web Search
 
-**Submission Track:** Enterprise Agents
-
----
-
-## 📦 Data Source
-
-- **Dataset**: [Bank Customer Churn Prediction Dataset](https://www.kaggle.com/datasets/saurabhbadole/bank-customer-churn-prediction-dataset)
-- **Source**: Kaggle
+**Submission Track:** Enterprise Agents | **Dataset:** [Bank Customer Churn Prediction](https://www.kaggle.com/datasets/saurabhbadole/bank-customer-churn-prediction-dataset)
 
 ---
 
 ## 📋 Project Overview
 
-This project demonstrates an advanced **multi-agent agentic AI system** that transforms raw bank customer churn data into actionable executive insights. Built for the **Enterprise Agents track**, it showcases a production-ready architecture where specialized AI agents work autonomously to deliver intelligent analysis, combining internal data exploration with external market intelligence through web search capabilities.
+This project demonstrates an advanced **multi-agent agentic AI system** that transforms raw bank customer churn data into actionable executive insights. Built for the **Enterprise Agents track**, it showcases a production-ready architecture where specialized AI agents autonomously deliver intelligent analysis, combining internal data exploration with external market intelligence.
 
-**Problem Statement:**
-Data analysis and insights generation is too manual and time-intensive for executives who need actionable intelligence quickly. Business stakeholders struggle to identify churn patterns, risk segments, and retention strategies from raw datasets. This project solves this by building an AI-powered agent system that automates comprehensive analysis while enabling real-time market context through intelligent web search, allowing executives to get data-driven insights with industry benchmarks.
+**Problem Statement:** Data analysis is too manual and time-intensive for executives needing actionable intelligence quickly. Business stakeholders struggle to identify churn patterns and retention strategies from raw datasets.
 
-**Solution:**
-A sophisticated multi-agent system powered by Google's Gemini LLM that autonomously:
-- Analyzes multi-dimensional customer churn data (geographic, demographic, financial, behavioral)
-- Executes parallel and sequential agent workflows for specialized analysis
-- Integrates web search to enrich insights with industry trends and benchmarks
-- Provides natural language Q&A interface tailored for executive decision-making
-- Maintains context and conversation history for multi-turn dialogue
+**Solution:** A sophisticated multi-agent system powered by Google's Gemini LLM that autonomously analyzes multi-dimensional customer data, executes parallel workflows, integrates web search for industry context, and provides natural language Q&A interface tailored for executive decision-making.
 
 ---
 
-## 🎯 Key Features & Technologies Implemented
+## 🎯 Key Features & Technologies
 
-### 1. **Multi-Agent System Architecture**
-- **Analytics Agent**: Autonomous engine performing multi-dimensional churn analysis
-- **Web Search Agent**: Secondary agent enriching insights with external market intelligence (optional activation)
-- **Gemini LLM Agent**: Orchestrator synthesizing insights and generating executive-level natural language responses
-- **Sequential & Parallel Execution**: Agents coordinate to maximize analysis depth and breadth
+### Multi-Agent System Architecture
+- **Analytics Agent**: Multi-dimensional churn analysis (geographic, demographic, financial, behavioral)
+- **Web Search Agent**: Enriches insights with external market intelligence
+- **Gemini LLM Agent**: Orchestrates agents and synthesizes executive-level responses
+- **Sequential & Parallel Execution**: Coordinated workflows for depth and breadth
 
-### 2. **Tools & Integration**
-- **Custom Analytics Tools**: Python-based functions for geographic, demographic, financial, and risk analysis
-- **Google Search Integration**: Web search grounding with Gemini for industry benchmarks and trends
-- **Function Tools**: Custom data transformation and insight generation functions
-- **API Integration**: Google Generative AI (Gemini 2.5 Flash) for LLM capabilities
+### Core Technologies
+- **LLM**: Google Gemini 2.5 Flash with Tool Calling & Grounding API
+- **Framework**: Google ADK (Agents Development Kit)
+- **Data Processing**: Pandas, NumPy on 10,000 customer records
+- **UI**: IPyWidgets-based Jupyter Notebook interface
+- **Memory**: InMemorySessionService for conversation state and chat history
 
-### 3. **Sessions & Memory Management**
-- **InMemorySessionService**: Maintains conversation state and chat history across interactions
-- **Context Engineering**: Intelligent data preparation for optimal LLM processing
-- **State Persistence**: Preserves agent insights and analysis results for consistent multi-turn dialogue
-- **Chat History Tracking**: Records all user questions and agent responses for audit and refinement
-
-### 4. **Advanced Agent Capabilities**
-- **Autonomous Decision-Making**: Agents decide when to use web search based on query relevance
-- **Real-time Data Analysis**: On-demand generation of executive summaries and risk assessments
-- **Market Intelligence**: Web search capability filtered for churn-related industry insights
-- **Conversational Q&A**: Natural language interface supporting complex business questions
-- **Data-Driven Recommendations**: Actionable insights with specific numbers and percentages
-
-### 5. **Executive-Level Interface**
-- **Visual Chatbot**: Jupyter widgets-based UI with real-time chat and quick-access buttons
-- **Web Search Toggle**: Users can enable/disable external research per query
-- **Formatted Responses**: Color-coded messages and professional formatting for executive consumption
-- **Interactive Exploration**: Quick buttons for common analyses (churn rate, risk segments, recommendations)
+### Advanced Capabilities
+- Autonomous decision-making on when to use web search
+- Real-time data analysis and executive summaries
+- Market intelligence with industry benchmarks
+- Conversational Q&A with multi-turn dialogue support
+- Data-driven recommendations with specific metrics
 
 ---
 
 ## 📊 Core Analysis Dimensions
 
-### Executive Summary
-- Total customers, churn rate, demographic averages, account metrics
-- Active member rates and credit card holder distributions
-
-### Geographic Analysis
-- Churn rates by country/region
-- Financial metrics comparison across geographies
-- High-risk geographic segments
-
-### Demographic Insights
-- Churn patterns by age group (<30, 30-40, 40-50, 50-60, 60+)
-- Gender-based churn analysis with credit score correlations
-- Age-gender interaction effects
-
-### Product & Engagement Analysis
-- Churn correlation with number of products held
-- Customer tenure patterns by product count
-- Active vs. inactive member engagement levels
-
-### Risk Segmentation
-- High-risk customer profile identification
-- Multi-dimensional segmentation (geography × gender × activity status)
-- Ranking of segments by churn severity
-
-### Financial Profiling
-- Comparison of churned vs. retained customer profiles
-- Balance, credit score, and salary analysis
-- Zero-balance identification for inactive segments
-
-### Customer Lifetime Value Impact
-- Total balance lost to churn
-- Estimated annual revenue loss calculation
-- Average tenure of churned customers
+- **Executive Summary**: Total customers, churn rate, demographic averages, engagement metrics
+- **Geographic Analysis**: Churn rates by region, financial comparisons, high-risk segments
+- **Demographic Insights**: Age group and gender-based churn patterns with credit score correlations
+- **Product & Engagement**: Churn correlation with products held, tenure patterns, activity levels
+- **Risk Segmentation**: Multi-dimensional profiles ranked by churn severity
+- **Financial Profiling**: Churned vs. retained customer comparisons, revenue loss calculations
+- **Customer Lifetime Value**: Total balance lost, estimated annual revenue impact
 
 ---
 
-## 🔧 Technical Implementation
-
-### 📐 Architectural Diagram
-
-![Architecture Diagram](architecture_diagram.jpg)
-
-### Architecture Components
-```
-┌─────────────────────────────────────────────────────────────────┐
-│              Executive Query Interface                          │
-│   (IPyWidgets UI + Streaming Output + Web Search Toggle)        │
-└──────────────────┬──────────────────────────────────────────────┘
-                   │ User Query (Natural Language Understanding)
-┌──────────────────▼──────────────────────────────────────────────┐
-│    Google Gemini 2.5 Flash Orchestrator Agent                   │
-│ (models/gemini-2.5-flash with Tool Calling + Grounding API)     │
-└──────────────────┬──────────────────────────────────────────────┘
-                   │
-        ┌──────────┴──────────────┐
-        │                         │
-┌───────▼──────────────┐  ┌───────▼────────────────────┐
-│ AnalyticsAgent       │  │ GoogleSearchAgent          │
-│ (Tool: Analytics)    │  │ (Google Search + Grounding)│
-│ • Geographic         │  │ • Query Relevance Filter   │
-│ • Demographic        │  │ • Industry Benchmarks      │
-│ • Financial          │  │ • Market Trends            │
-│ • Risk Segmentation  │  │ • Competitive Analysis     │
-└───────┬──────────────┘  └───────┬────────────────────┘
-        │                         │
-┌───────▼──────────────┐  ┌───────▼────────────────────┐
-│ Pandas DataFrame     │  │ Google Search Results      │
-│ (In-Memory Cache)    │  │ (JSON Parsed + Ranked)     │
-│ • 10,000 Records     │  │ • Top 5 Results Filtered   │
-│ • Pre-computed Stats │  │ • Relevance Scored         │
-│ • Dynamic Queries    │  │                            │
-│   (Real-time Calc)   │  │                            │
-└──────────────────────┘  └────────────────────────────┘
-        │                         │
-        └─────────┬───────────────┘
-                  │
-       ┌──────────▼──────────┐
-       │ Response Synthesis  │
-       │ (Multi-turn Memory) │
-       │ InMemorySession     │
-       │ Service             │
-       └─────────┬───────────┘
-                 │
-       ┌─────────▼──────────────┐
-       │ Formatted Output       │
-       │ (Executive Summary)    │
-       └────────────────────────┘
-```
+## 🔧 Technical Architecture
 
 ### Data Flow
 1. **Data Ingestion**: Bank Customer Churn dataset (10,000 records)
 2. **Analysis Execution**: AnalyticsAgent performs autonomous multi-dimensional analysis
 3. **Context Preparation**: Formatted insights prepared for LLM processing
 4. **Query Processing**: User questions routed through Gemini orchestrator
-5. **Optional Web Search**: Queries analyzed for churn-relevance; searches executed if relevant
+5. **Optional Web Search**: Churn-relevant queries trigger external research
 6. **Response Generation**: Natural language responses with data citations
-7. **History Management**: All interactions stored in chat history for continuity
+7. **History Management**: Chat history maintained for multi-turn continuity
 
-### Technologies Used
-- **LLM**: Google Gemini 2.5 Flash (`models/gemini-2.5-flash`)
-- **Frameworks**: Google ADK (Agents Development Kit)
-- **Data Processing**: Pandas, NumPy
-- **UI**: IPyWidgets (Jupyter Notebook Interface)
-- **API**: Google Generative AI, Google Search (via Gemini Grounding)
+### Architecture Components
+```
+User Query (Natural Language)
+        ↓
+Gemini 2.5 Flash Orchestrator
+        ↓
+    ┌───┴───┐
+    ↓       ↓
+Analytics  Google Search
+Agent      Agent
+    ↓       ↓
+ Pandas    Search
+ Data      Results
+    └───┬───┘
+        ↓
+ Response Synthesis
+ (InMemorySession)
+        ↓
+ Executive Output
+```
+
+### Technologies Stack
 - **Language**: Python 3.x
+- **LLM**: `models/gemini-2.5-flash`
+- **APIs**: Google Generative AI, Google Search
+- **Data**: Pandas, NumPy
+- **Interface**: IPyWidgets, Jupyter
 
 ---
 
 ## 🚀 Usage Examples
 
-### Quick Start: Interactive Chatbot
+### Interactive Chatbot
 ```python
-# Create and launch the visual chatbot
 visual_chatbot = create_visual_chatbot(agent)
 ```
 
-### Sample Questions
-- **"What's our overall churn rate?"** → Executive summary with key metrics
-- **"Which geography has the highest churn?"** → Geographic analysis with comparisons
-- **"Who are our high-risk customer segments?"** → Top 5 risk profiles with details
-- **"What's the financial impact of churn?"** → Revenue loss calculations
-- **"What recommendations would reduce churn?"** → Data-driven action items
+### Sample Executive Questions
+- *"What's our overall churn rate?"* → Executive summary with key metrics
+- *"Which geography has the highest churn?"* → Geographic breakdown with comparisons
+- *"Who are our high-risk customer segments?"* → Top 5 risk profiles with details
+- *"What's the financial impact of churn?"* → Revenue loss calculations
+- *"What recommendations would reduce churn?"* → Data-driven action items
 
 ### Advanced Queries with Web Search
-Enable the web search toggle for questions like:
 - *"Compare our churn rate to industry benchmarks"*
 - *"What strategies are banks using to reduce churn?"*
-- *"Look up retention best practices for our high-risk demographics"*
+- *"Look up retention best practices for our demographics"*
 
 ---
 
-## 📈 Key Insights from Analysis
+## 📈 Key Insights
 
-The system analyzes the Bank Customer Churn dataset to reveal:
-- **Churn Patterns**: Geographic variations (Spain, France, Germany show different patterns)
+The system reveals critical patterns:
+- **Churn Patterns**: Geographic variations across Spain, France, Germany
 - **Risk Profiles**: Female customers, inactive members, and 40-60 age group show elevated churn
-- **Product Paradox**: Customers with more products unexpectedly show higher churn (potential friction point)
-- **Financial Impact**: Significant revenue loss concentrated in specific demographic segments
+- **Product Paradox**: Customers with more products unexpectedly show higher churn
+- **Financial Impact**: Significant revenue loss concentrated in specific segments
 - **Engagement Gap**: Active members with account activity show dramatically lower churn
 
 ---
