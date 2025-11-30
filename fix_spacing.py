@@ -5,21 +5,9 @@ import re
 with open('capstone_notebook_agentic_ai_kaggle.ipynb', 'r', encoding='utf-8') as f:
     notebook = json.load(f)
 
-# List of fixes to apply
+# List of fixes to apply - fix all '. ' patterns (dot space)
 fixes = [
-    (r'dataframe\. copy', 'dataframe.copy'),
-    (r'self\. df', 'self.df'),
-    (r"IsActiveMember\]\. sum", "IsActiveMember'].sum"),
-    (r'observed=True\). agg', 'observed=True).agg'),
-    (r'pd\. DataFrame', 'pd.DataFrame'),
-    (r'\]\. sort_values', '].sort_values'),
-    (r'high_risk\. head', 'high_risk.head'),
-    (r"Balance\]\. mean", "Balance'].mean"),
-    (r'key\. replace', 'key.replace'),
-    (r'self\. insights', 'self.insights'),
-    (r"segments\]\. head", "segments'].head"),
-    (r'gen\. configure', 'gen.configure'),
-    (r'self\.chat_session\. send_message', 'self.chat_session.send_message'),
+    (r'\. ', '.'),  # Replace all '. ' with '.'
 ]
 
 # Apply fixes to all cells
