@@ -1,5 +1,5 @@
-# 🤖 Multi-Agent Intelligent Insights Engine: Bank Customer Churn Analytics
-## Subtitle: Executive Intelligence Platform with Gemini-Powered Q&A and Web Search Integration
+# 🤖 AI-Powered Multi-Agent Customer Churn Analytics Engine
+## Executive Intelligence Platform with Gemini-Powered Insights Q&A and Web Search Capabilities
 
 **Submission Track:** Enterprise Agents
 
