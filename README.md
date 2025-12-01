@@ -9,7 +9,7 @@
 
 - **Dataset**: [Bank Customer Churn Prediction Dataset](https://www.kaggle.com/datasets/saurabhbadole/bank-customer-churn-prediction-dataset)
 - **Source**: Kaggle
-- **Demo**: https://youtu.be/f_DFgplRhDU
+- **Demo**: https://www.youtube.com/watch?v=UP6xIwcROPQ
 ---
 
 ## 📋 Project Overview
